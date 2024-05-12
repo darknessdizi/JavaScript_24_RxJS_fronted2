@@ -1,6 +1,6 @@
 # Домашнее задание к занятию "11. RxJS"
 
-<!-- [![Build status](https://ci.appveyor.com/api/projects/status/qbj1irayta0irh1e?svg=true)](https://ci.appveyor.com/project/darknessdizi/javascript-21-websockets-fronted-task2) -->
+[![Build status](https://ci.appveyor.com/api/projects/status/a3sepx2q3fth3ikp?svg=true)](https://ci.appveyor.com/project/darknessdizi/javascript-24-rxjs-fronted2)
 
 ## Backend
 

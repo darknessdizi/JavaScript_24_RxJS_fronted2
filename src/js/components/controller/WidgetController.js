@@ -4,21 +4,20 @@ import {
 } from 'rxjs';
 
 export default class WidgetController {
-  constructor(edit) {
+  constructor(edit, url) {
     this.edit = edit;
+    this.url = url;
   }
 
   init() {
-    // const stream$ = ajax.getJSON('https://javascript-24-rxjs-backend2.onrender.com/posts/latest')
-    const stream$ = ajax.getJSON('http://localhost:9000/posts/latest')
+    const stream$ = ajax.getJSON(`${this.url}/posts/latest`)
       .pipe(
         map((value) => {
           const arrayStream$ = from(value.data)
             .pipe(
               mergeMap((obj) => {
                 const object = obj;
-                // const url = `https://javascript-24-rxjs-backend2.onrender.com/posts/${obj.id}/comments/latest`;
-                const url = `http://localhost:9000/posts/${obj.id}/comments/latest`;
+                const url = `${this.url}/posts/${obj.id}/comments/latest`;
                 return WidgetController.getRequest(url, object)
                   .pipe(
                     catchError((err) => {
