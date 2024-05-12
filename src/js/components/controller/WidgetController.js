@@ -47,10 +47,11 @@ export default class WidgetController {
     // Callback - получены данные от сервера
     const result = obj;
     result.created = WidgetController.getNewFormatDate(obj.created);
-    for (const index in result.comments) {
-      const item = result.comments[index];
-      item.created = WidgetController.getNewFormatDate(obj.comments[index].created);
-    }
+    result.comments = result.comments.map((item) => {
+      const comment = item;
+      comment.created = WidgetController.getNewFormatDate(item.created);
+      return comment;
+    });
     this.edit.drawPost(result);
   }
 
