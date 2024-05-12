@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: aquamarine;
+  padding-top: 10px;
+}
+
+.conteiner {
+  background-color: white;
+  width: 50%;
+  height: 90vh;
+  margin: 20px auto;
+  overflow: hidden; /* Скрывает содержимое вне блока */
+  overflow-y: auto; /* Включаем скролл если блок переполнен */
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.widget-footer {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.link-load {
+  color: black;
+}
